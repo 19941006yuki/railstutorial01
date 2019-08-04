@@ -1,4 +1,7 @@
+=begin
 source 'https://rubygems.org'
+
+ruby '2.6.3'
 
 gem 'rails',        '5.2.3'
 gem 'puma',         '3.9.1'
@@ -8,9 +11,10 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
+gem 'bootsnap', require: false
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
+  #gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -36,8 +40,8 @@ end
 # Windows環境ではtzinfo-dataというgemを含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+=end
 
-=begin
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -83,6 +87,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pg'
 end
 
 group :development do
@@ -92,7 +97,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'sqlite3', '1.3.8'
+  gem 'sqlite3'#, '1.3.8'
 end
 
 group :test do
@@ -110,6 +115,3 @@ group :production do
   #本番ではpostgressを使用
   gem 'pg'
 end
-
-
-=end
